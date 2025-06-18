@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidade Criativa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Resetando estilos padrão */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #ff7a18, #af002d, #319197);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin-top: 50px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .map-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background: #444;
+            border-radius: 10px;
+        }
+
+        .map {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 2px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .map-cell {
+            width: 100%;
+            height: 100%;
+            background-color: #2d3e50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #fff;
+            color: #fff;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .map-cell:hover {
+            background-color: #ff6f61;
+        }
+
+        .footer {
+            margin-top: 50px;
+            font-size: 0.9em;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #ff6f61;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Bem-vindo à Universidade Criativa!</h1>
+    <h2>Explore o nosso campus virtual e divirta-se no labirinto!</h2>
+
+    <div class="main-container">
+        <!-- Seção do Mapa/Labirinto -->
+        <div class="section">
+            <h2>Mapa Interativo</h2>
+            <div class="map-container">
+                <div class="map">
+                    <!-- Criando as células do "labirinto" -->
+                    <div class="map-cell">Entrada</div>
+                    <div class="map-cell">Biblioteca</div>
+                    <div class="map-cell">Cantina</div>
+                    <div class="map-cell">Laboratório</div>
+                    <div class="map-cell">Auditório</div>
+                    <div class="map-cell">Estádio</div>
+                    <div class="map-cell">Biblioteca</div>
+                    <div class="map-cell">Pátio</div>
+                    <div class="map-cell">Laboratório</div>
+                    <div class="map-cell">Entrada</div>
+                    <div class="map-cell">Parque</div>
+                    <div class="map-cell">Sala de Aula</div>
+                    <div class="map-cell">Museu</div>
+                    <div class="map-cell">Centro Cultural</div>
+                    <div class="map-cell">Estádio</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Outras seções -->
+        <div class="section">
+            <h2>Venha fazer parte da nossa comunidade</h2>
+            <p>Aqui na Universidade Criativa, você vai aprender de maneira inovadora, com professores qualificados e uma infraestrutura de ponta.</p>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <div class="footer">
+        <p>&copy; 2025 Universidade Criativa | <a href="#">Sobre nós</a> | <a href="#">Contato</a></p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+/* Resetando estilos padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #ff7a18, #af002d, #319197);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* Animações de entrada */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    animation: slideIn 1s ease-out;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out 1s forwards;
+}
+
+/* Container principal */
+.main-container {
+    max-width: 1200px;
+    margin-top: 50px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+/* Mapa/Labirinto */
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: #444;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Grid do mapa */
+.map {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Células do mapa */
+.map-cell {
+    width: 100%;
+    height: 100%;
+    background-color: #2d3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* Hover sobre as células */
+.map-cell:hover {
+    background-color: #ff6f61;
+    transform: scale(1.1);
+}
+
+/* Efeito de clique */
+.map-cell:active {
+    background-color: #ff3d2e;
+}
+
+/* Estilo do rodapé */
+.footer {
+    margin-top: 50px;
+    font-size: 0.9em;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+/* Links no rodapé */
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ff6f61;
+}
+
+/* Botões de ação */
+.button {
+    background-color: #ff6f61;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* Hover do botão */
+.button:hover {
+    background-color: #ff3d2e;
+}
+
+/* Responsividade para telas menores */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .map-container {
+        height: 300px;
+    }
+
+    .map-cell {
+        font-size: 1em;
+    }
+
+    .main-container {
+        width: 90%;
+        padding: 15px;
+    }
+}
